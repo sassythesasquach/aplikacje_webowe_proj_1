@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
+import { Button, Modal, ModalHeader, ModalBody, ButtonDropdown } from "reactstrap";
 import NewDataForm from "./NewDataForm";
 
 class NewDataModal extends Component {
@@ -18,6 +18,7 @@ class NewDataModal extends Component {
 
     var title = "Editing Data";
     var button = <Button onClick={this.toggle}>Edit</Button>;
+    //var buttonNew = <Button onClick={this.newInput()}>Edit</Button>;
     if (create) {
       title = "Creating New Data";
 
@@ -30,7 +31,19 @@ class NewDataModal extends Component {
         >
           Create New
         </Button>
+        
       );
+
+      /*buttonNew = (
+        <Button
+        color="primary"
+        className="float-right"
+        onClick={this.toggle}
+        style={{ minWidth: "200px" }}
+        >
+
+        </Button>
+      )*/
     }
 
     return (
